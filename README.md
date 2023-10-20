@@ -6,7 +6,7 @@ This project is about coding a C library.
 It will contain a lot of general purpose functions your programs will rely upon.
 
 
-![Illustration on this project](https://github.com/OnnaMcadva/42_Prague_Libft/blob/main/Screenshot%20from%202023-10-19%2016-32-02.png)
+![image](https://github.com/OnnaMcadva/42_Prague_Libft/assets/94723781/d5101541-f57f-41c8-9a89-5702070a721a)
 
 
 # Libft Functions
