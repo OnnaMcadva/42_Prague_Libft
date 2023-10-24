@@ -65,3 +65,5 @@ It will contain a lot of general purpose functions your programs will rely upon.
 - [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list. /итерирует по каждому элементу связного списка lst и применяет к содержимому каждого элемента функцию f./
 - [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list. /создаёт и возвращает новый список, полученный в результате применения функции f к каждому элементу исходного списка lst./
 
+
+![Screenshot from 2023-10-24 20-44-46](https://github.com/OnnaMcadva/42_Prague_Libft/assets/94723781/a559727c-a7d6-434a-a8bb-dfe12539f60d)
