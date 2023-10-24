@@ -61,7 +61,7 @@ It will contain a lot of general purpose functions your programs will rely upon.
 - [`ft_lstsize`](ft_lstsize.c)	- counts the number of elements in a list. /подсчитывает количество элементов в связанном списке t_list./
 - [`ft_lstlast`](ft_lstlast.c)	- returns the last element of the list. /возвращает последний элемент связного списка lst./
 - [`ft_lstadd_back`](ft_lstadd_back.c)	- adds an element at the end of a list. /добавляет элемент new в конец связного списка lst./
-- [`ft_lstclear`](ft_lstclear.c)	- deletes and free list. //
-- [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list. //
+- [`ft_lstclear`](ft_lstclear.c)	- deletes and free list. /удаляет и очищает все элементы связного списка lst, используя функцию del для удаления содержимого каждого элемента./
+- [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list. /итерирует по каждому элементу связного списка lst и применяет к содержимому каждого элемента функцию f./
 - [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list. /создаёт и возвращает новый список, полученный в результате применения функции f к каждому элементу исходного списка lst./
 
