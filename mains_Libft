@@ -1,0 +1,906 @@
+
+/*
+#include <stdio.h>
+
+int main() {
+    const char *str = "+12345";
+    int num1 = atoi(str);
+	int num2 = ft_atoi(str);
+	printf("ft: %d\n", num2);
+    printf("atoi: %d\n\n", num1);
+	printf("ft: %d\n", ft_atoi("       -5351"));
+	printf("atoi: %d\n\n", atoi("       -5351"));
+	printf("ft: %d\n", ft_atoi("-+5351"));
+	printf("atoi: %d\n\n", atoi("-+5351"));
+	printf("ft: %d\n", ft_atoi("+5351654654"));
+	printf("atoi: %d\n\n", atoi("+5351654654"));
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <strings.h>
+
+int main() {
+    char buffer1[3];
+    char buffer2[3];
+    
+    bzero(buffer1, sizeof(buffer1));
+
+    for (int i = 0; i < (int)sizeof(buffer1); i++) {
+        printf("%d \n", buffer1[i]);
+    }
+
+    ft_bzero(buffer2, sizeof(buffer2));
+
+    for (int i = 0; i < (int)sizeof(buffer2); i++) {
+        printf("%d ", buffer2[i]);
+    }
+    return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    void    *my_ptr;
+    void    *orig_ptr;
+    size_t  sizes[] = {5, 1, 2, 0};
+
+    for (size_t i = 0; sizes[i] != 0; i++)
+    {
+        printf("Testing for size: %zu\n", sizes[i]);
+
+        my_ptr = ft_calloc(sizes[i], sizeof(char));
+        orig_ptr = calloc(sizes[i], sizeof(char));
+
+        printf("My calloc pointer: %p\n", my_ptr);
+        printf("Original calloc pointer: %p\n", orig_ptr);
+
+        for (size_t j = 0; j < sizes[i]; j++)
+        {
+            printf("My calloc value at %zu: %d\n", j, ((char *)my_ptr)[j]);
+            printf("Original calloc value at %zu: %d\n", j, ((char *)orig_ptr)[j]);
+        }
+
+        free(my_ptr);
+        free(orig_ptr);
+
+        printf("\n");
+    }
+
+    return (0);
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main() {
+    int number = -103;
+    char *str = ft_itoa(number);
+    
+    if (str != NULL) {
+        printf("Число в виде строки: %s\n", str);
+    	free(str);
+    } else {
+        printf("Ошибка выделения памяти.\n");
+    }
+    
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    const char *str = "Hello, World!";
+    int search_char = 'W';
+    size_t str_len = strlen(str);
+
+	void *result2 = ft_memchr(str, search_char, str_len);
+    if (result2 != NULL) {
+        printf("'%c' на %ld\n", search_char, (char *)result2 - str);
+    } else {
+        printf("'%c' не найдено\n", search_char);
+    }
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    const char *str1 = "Hello, World!";
+    const char *str2 = "Hello, Coder!";
+    size_t n = 8; 
+
+    int result = ft_memcmp(str1, str2, n);
+
+    if (result < 0) {
+        printf("Первые %zu байтов различаются: str1 < str2\n", n);
+    } else if (result > 0) {
+        printf("Первые %zu байтов различаются: str1 > str2\n", n);
+    } else {
+        printf("Первые %zu байтов идентичны: str1 == str2\n", n);
+    }
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <string.h> 
+
+int main() {
+    char source[] = "Hello, World!";
+    char destination[20]; 
+
+    size_t num_bytes_to_copy = strlen(source) + 1;
+    ft_memcpy(destination, source, num_bytes_to_copy);
+
+    printf("Скопированная строка: %s\n", destination);
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char src[50] = "Source string";
+    char dest[50];
+
+    ft_memmove(dest, src, strlen(src) + 1);
+    printf("Source string: %s\n", src);
+    printf("Destination string after memmove: %s\n", dest);
+
+    ft_memmove(src + 5, src + 7, 8);
+    printf("Source string after overlapping memmove: %s\n", src);
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char buffer[50];
+
+    ft_memset(buffer, 64, sizeof(buffer) - 1);
+    buffer[sizeof(buffer) - 1] = '\0';
+
+    printf("Buffer after memset: %s\n", buffer);
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main() {
+    char character = 'A';
+    int file_descriptor = 1;
+
+    ft_putchar_fd(character, file_descriptor);
+
+    return 0;
+}
+*/
+
+
+/*
+#include <fcntl.h>
+#include <stdio.h>
+
+int main()
+{
+    char *str = "Привет, мир!";
+    int fd = open("openme.txt", O_WRONLY | O_CREAT, 0644);
+
+    if (fd == -1)
+    {
+        perror("Ошибка открытия файла");
+        return 1;
+    }
+
+    ft_putendl_fd(str, fd);
+    ft_putendl_fd("Еще одна строка", fd);
+    close(fd);
+
+    return 0;
+}
+*/
+
+
+
+/*
+int main()
+{
+	ft_putnbr_fd(-123456, 1);
+	ft_putnbr_fd(-2147483648, 1);
+	ft_putnbr_fd(999, 1);
+	ft_putnbr_fd(6, 1);
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main() {
+    char *message = "Привет, мир!";
+    int file_descriptor = 1;
+
+    ft_putstr_fd(message, file_descriptor);
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char **res;
+	int i = 0;
+
+	res = ft_split("This is a simple test!", ' ');
+	if (!res)
+	{
+		printf("Failed to split the string.\n");
+		return (1);
+	}
+	while (res[i])
+	{
+		printf("Word %d: %s\n", i + 1, res[i]);
+		free(res[i]);
+		i++;
+	}
+	free(res);
+	return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    const char *string = "Hello, World!";
+    char *result;
+
+    result = ft_strchr(string, 'o');
+    if (result)
+        printf("Первый 'o' находится на позиции: %ld\n", result - string);
+    else
+        printf("'o' не найден в строке.\n");
+
+    result = ft_strchr(string, 'z');
+    if (result)
+        printf("Первый 'z' находится на позиции: %ld\n", result - string);
+    else
+        printf("'z' не найден в строке.\n");
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    const char *orig = "Привет, мир!";
+    char *copy;
+
+    copy = ft_strdup(orig);
+
+    if (copy)
+    {
+        printf("Оригинальная строка: %s\n", orig);
+        printf("Копия строки: %s\n", copy);
+        free(copy);
+    }
+    else
+    {
+        printf("Ошибка выделения памяти.\n");
+    }
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+void my_function(unsigned int i, char *c)
+{
+    *c = *c + i;
+}
+
+int main()
+{
+    char str[] = "Привет!";
+
+    printf("До: %s\n", str);
+    ft_striteri(str, my_function);
+    printf("После: %s\n", str);
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    char const *str1 = "Привет, ";
+    char const *str2 = "мир!";
+    char *joined;
+
+    joined = ft_strjoin(str1, str2);
+
+    if (joined)
+    {
+        printf("%s\n", joined);
+        free(joined);
+    }
+    else
+    {
+        printf("Ошибка выделения памяти.\n");
+    }
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char dest1[50] = "Hello, ";
+	char dest2[50] = "Hello, ";
+	char *src = "World!";
+	size_t ret1, ret2;
+
+	ret1 = strlcat(dest1, src, sizeof(dest1));
+	ret2 = ft_strlcat(dest2, src, sizeof(dest2));
+
+	printf("Original strlcat: %s, returned: %lu\n", dest1, ret1);
+	printf("My ft_strlcat: %s, returned: %lu\n", dest2, ret2);
+
+	return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char dest1[50];
+	char dest2[50];
+	char *src = "Hello, World!";
+	size_t ret1, ret2;
+
+	ret1 = strlcpy(dest1, src, sizeof(dest1));
+	ret2 = ft_strlcpy(dest2, src, sizeof(dest2));
+
+	printf("Original strlcpy: %s, returned: %lu\n", dest1, ret1);
+	printf("My ft_strlcpy: %s, returned: %lu\n", dest2, ret2);
+
+	return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+char sample_function(unsigned int i, char c)
+{
+	return (c + i);
+}
+
+int main(void)
+{
+	char *result;
+	char *str = "Hello";
+
+	result = ft_strmapi(str, sample_function);
+
+	printf("Original: %s\n", str);
+	printf("Mapped: %s\n", result);
+
+	free(result);
+	return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	char *s1 = "Hello";
+	char *s2 = "Helzoo";
+	size_t n = 4;
+
+	int result = ft_strncmp(s1, s2, n);
+
+	if (result < 0)
+		printf("s1 < s2\n");
+	else if (result > 0)
+		printf("s1 > s2\n");
+	else
+		printf("s1 = s2\n");
+
+	return (0);
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    const char *str = "from a function with result type";
+    const char *substr = "function";
+
+    const char *result = ft_strnstr(str, substr, 18);
+    if (result)
+        printf("Найдено вхождение: %s\n", result);
+    else
+        printf("Вхождение не найдено.\n");
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char *str = "Hello, World! Hello, Onna!";
+    char ch = 'o';
+
+    char *result = ft_strrchr(str, ch);
+    if (result)
+        printf("Последнее вхождение символа '%c'
+		 находится в позиции: %ld\n", ch, result - str);
+    else
+        printf("Символ '%c' не найден в строке.\n", ch);
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char *str = "*****Hello, World!*****";
+    char *set = "*";
+
+    char *trimmed = ft_strtrim(str, set);
+    if (trimmed)
+    {
+        printf("Исходная строка: %s\n", str);
+        printf("Обрезанная строка: %s\n", trimmed);
+        free(trimmed);
+    }
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	char *result;
+	char s[] = "Hello, World!";
+	
+	result = ft_substr(s, 7, 5);
+	printf("Substring is: %s\n", result);
+	free(result);
+	return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	t_list *list;
+	char *str = "Hello, World!";
+
+	list = ft_lstnew(str);
+	if (list)
+	{
+		printf("Content of the list: %s\n", (char *)list->content);
+		free(list);
+	}
+	return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h> 
+
+int main(void)
+{
+    t_list *head = ft_lstnew("Second");
+    t_list *new_node = ft_lstnew("First");
+
+    ft_lstadd_front(&head, new_node);
+
+    while (head)
+    {
+        printf("%s\n", (char *)head->content);
+        head = head->next;
+    }
+    return (0);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    t_list *list = NULL;
+
+    for (int i = 0; i < 5; i++)
+    {
+        t_list *new_node = ft_lstnew((void *)(long)i);
+        new_node->next = list;
+        list = new_node;
+    }
+
+    printf("Size of the list: %d\n", ft_lstsize(list));
+
+    while (list)
+    {
+        t_list *tmp = list;
+        list = list->next;
+        free(tmp);
+    }
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    t_list *list = NULL;
+
+    for (int i = 0; i < 5; i++)
+    {
+        t_list *new_node = ft_lstnew((void *)(long)i);
+        ft_lstadd_back(&list, new_node);
+    }
+
+     t_list *tmp = list;
+    while (tmp)
+    {
+        printf("%ld -> ", (long)tmp->content);
+        tmp = tmp->next;
+    }
+    printf("NULL\n");
+
+    while (list)
+    {
+        t_list *to_free = list;
+        list = list->next;
+        free(to_free);
+    }
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct s_list
+{
+    void            *content;
+    struct s_list   *next;
+} t_list;
+
+void ft_lstclear(t_list **lst, void (*del)(void *));
+
+void del_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+    t_list *list = malloc(sizeof(t_list));
+    list->content = malloc(100);
+    list->next = malloc(sizeof(t_list));
+    list->next->content = malloc(100);
+    list->next->next = NULL;
+
+    printf("До удаления: Указатель на первый узел: %p, содержимое: %p\n", (void *)list, list->content);
+
+    ft_lstclear(&list, del_content);
+
+    printf("После удаления: Указатель на список: %p\n", (void *)list);
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct s_list
+{
+    void            *content;
+    struct s_list   *next;
+} t_list;
+
+void ft_lstdelone(t_list *lst, void (*del)(void *));
+
+void del_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+    t_list *node = malloc(sizeof(t_list));
+    node->content = malloc(100);
+    node->next = NULL;
+
+    printf("До удаления: Указатель на узел: %p, содержимое: %p\n", (void *)node, node->content);
+
+    ft_lstdelone(node, del_content);
+
+    printf("После удаления: Узел и его содержимое освобождены.\n");
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct s_list
+{
+    void            *content;
+    struct s_list   *next;
+} t_list;
+
+void ft_lstiter(t_list *lst, void (*f)(void *));
+
+void print_content(void *content)
+{
+    printf("%d\n", *(int *)content);
+}
+
+int main(void)
+{
+    t_list node1;
+    t_list node2;
+    int val1 = 42;
+    int val2 = 24;
+
+    node1.content = &val1;
+    node1.next = &node2;
+    node2.content = &val2;
+    node2.next = NULL;
+
+    ft_lstiter(&node1, print_content);
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    t_list *list = NULL;
+
+    // Добавляем несколько элементов в список
+    for (int i = 0; i < 5; i++)
+    {
+        t_list *new_node = ft_lstnew((void *)(long)i);
+        new_node->next = list;
+        list = new_node;
+    }
+
+    t_list *last_node = ft_lstlast(list);
+    printf("Content of the last node: %ld\n", (long)last_node->content);
+
+    // Освободить память
+    while (list)
+    {
+        t_list *tmp = list;
+        list = list->next;
+        free(tmp);
+    }
+
+    return 0;
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+void *double_content(void *content)
+{
+    int *new_content = malloc(sizeof(int));
+    *new_content = 2 * (*(int *)content);
+    return new_content;
+}
+
+void delete_content(void *content)
+{
+    free(content);
+}
+
+int main(void)
+{
+    t_list node1, node2, *result;
+    int val1 = 42, val2 = 24;
+
+    node1.content = &val1;
+    node1.next = &node2;
+    node2.content = &val2;
+    node2.next = NULL;
+
+    result = ft_lstmap(&node1, double_content, delete_content);
+    while (result)
+    {
+        printf("%d\n", *(int *)result->content);
+        delete_content(result->content);
+        t_list *temp = result;
+        result = result->next;
+        free(temp);
+    }
+    return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+// ... (Определение структуры t_list и других функций)
+
+void	*increment_content(void *content)
+{
+	int *new_content = malloc(sizeof(int));
+	*new_content = (*(int *)content) + 1;
+	return (new_content);
+}
+
+void	delete_content(void *content)
+{
+	free(content);
+}
+
+int		main(void)
+{
+	t_list *node1, *node2, *result;
+	int val1 = 10, val2 = 20;
+
+	node1 = ft_lstnew(&val1);
+	node2 = ft_lstnew(&val2);
+	node1->next = node2;
+
+	result = ft_lstmap(node1, increment_content, delete_content);
+	while (result)
+	{
+		printf("%d\n", *(int *)result->content);
+		t_list *temp = result;
+		result = result->next;
+		delete_content(temp->content);
+		free(temp);
+	}
+
+	// Освобождение памяти для исходного списка
+	delete_content(node1->content);
+	delete_content(node2->content);
+	free(node1);
+	free(node2);
+
+	return (0);
+}
+*/
+
+
+
