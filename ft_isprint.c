@@ -6,7 +6,7 @@
 /*   By: anmakaro <anmakaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:04:40 by anmakaro          #+#    #+#             */
-/*   Updated: 2023/10/17 20:43:12 by anmakaro         ###   ########.fr       */
+/*   Updated: 2023/11/19 15:33:30 by anmakaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int symba)
 {
-	if (32 <= symba && symba <= 126)
+	if (' ' <= symba && symba <= '~')
 		return (1);
 	return (0);
 }
