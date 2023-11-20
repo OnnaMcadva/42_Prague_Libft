@@ -6,7 +6,7 @@
 /*   By: anmakaro <anmakaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:14:13 by anmakaro          #+#    #+#             */
-/*   Updated: 2023/10/21 20:51:29 by anmakaro         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:39:36 by anmakaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*new_str;
 	size_t	len;
 
+	if (!s || !f)
+		return (NULL);
 	len = 0;
 	while (s[len] != '\0')
 		len++;
