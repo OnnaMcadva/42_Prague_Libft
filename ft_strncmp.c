@@ -6,7 +6,7 @@
 /*   By: anmakaro <anmakaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 11:32:32 by anmakaro          #+#    #+#             */
-/*   Updated: 2023/10/23 13:04:11 by anmakaro         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:35:32 by anmakaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	const unsigned char	*unc2;
 	unsigned int		i;
 
+	if (!s1 || !s2)
+		return (0);
 	unc1 = (const unsigned char *)s1;
 	unc2 = (const unsigned char *)s2;
 	i = 0;
