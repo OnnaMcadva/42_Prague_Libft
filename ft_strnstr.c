@@ -6,7 +6,7 @@
 /*   By: anmakaro <anmakaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:10:11 by anmakaro          #+#    #+#             */
-/*   Updated: 2023/10/21 20:51:45 by anmakaro         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:43:05 by anmakaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 	size_t	i;
 
+	if (!big || !little)
+		return (NULL);
 	if (*little == '\0')
 		return ((char *)big);
 	little_len = 0;
