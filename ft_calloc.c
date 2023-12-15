@@ -21,8 +21,9 @@ void	*ft_calloc(size_t count, size_t size)
 	total_size = count * size;
 	if (count && total_size / count != size)
 		return (NULL);
-	//	if (nitems && (size_t)(-1) / nitems < size)
-	//	return (NULL);
+	//	if (count && (size_t)(-1) / count < size)
+	//		return (NULL);
+	// интересный вариант проверки на оверфлоу - списано у чувака из Школы)
 	ptr = malloc(total_size);
 	i = 0;
 	if (ptr == NULL)
