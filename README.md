@@ -1,4 +1,9 @@
 
+<p align="center">
+  <img src="https://github.com/OnnaMcadva/42_Prague_Libft/assets/94723781/7c683931-ba63-48b6-8672-e2f8dbcd3eb2">
+</p>
+
+
 # My very first own library
 
 
