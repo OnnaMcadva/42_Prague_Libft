@@ -42,3 +42,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	return (ft_substr(s1, i, j - i + 1));
 }
+
+/*
+int main() {
+    const char *original_str = "   Hello, World!   ";
+    const char *set = " ";
+
+    char *trimmed_str = ft_strtrim(original_str, set);
+
+    if (trimmed_str) {
+        printf("Original string: \"%s\"\n", original_str);
+        printf("Trimmed string: \"%s\"\n", trimmed_str);
+        free(trimmed_str);
+    } else {
+        printf("Memory allocation failed.\n");
+    }
+
+    return (0);
+}
+*/
