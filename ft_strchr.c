@@ -24,3 +24,25 @@ char	*ft_strchr(const char *s, int i)
 		return ((char *)s);
 	return (0);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    const char *str = "Hello, World!";
+    char searchChar = 'W';
+
+    char *result = strchr(str, searchChar);
+	char *result2 = ft_strchr(str, searchChar);
+
+	if (result != NULL) {
+        printf("Symbol '%c' in position %ld\n", searchChar, result - str);
+        printf("Symbol '%c' in position %ld\n", searchChar, result2 - str);
+    } else {
+        printf("Symbol '%c' not in string\n", searchChar);
+    }
+
+
+    return 0;
+}
+*/
